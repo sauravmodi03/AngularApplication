@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Personal Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let obj of info">
+    <ion-grid>
+      <ion-row>
+        <ion-col>{{obj.label}}</ion-col>
+      </ion-row>
+      <ion-row class="info-value">
+        <ion-col>{{obj.value}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-item detail-none routerDirection="'root'" routerLink="/home">
+    <div class="footer">
+      <ion-title class="home-icon">
+        <ion-icon name="home"></ion-icon>
+      </ion-title>
+    </div>
+  </ion-item>
+</ion-footer>

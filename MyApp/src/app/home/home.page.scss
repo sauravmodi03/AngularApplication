@@ -1,0 +1,32 @@
+.welcome-card img {
+  max-height: 40vh;
+  overflow: hidden;
+}
+.toolbar-background {
+  background: #c4f6f0 !important;
+}
+.about {
+  text-align: justify;
+}
+ion-item {
+  padding: 0;
+}
+ion-card {
+  background: #dce7e8;
+}
+
+// .transition {    
+//   left: -100px;
+//   -webkit-animation: slide 1s forwards;
+//   -webkit-animation-delay: 2s;
+//   animation: slide 1s forwards;
+//   animation-delay: 2s;
+// }
+
+// @-webkit-keyframes transition {
+//   100% { left: 0; }
+// }
+
+// @keyframes transition {
+//   100% { left: 0; }
+// }
