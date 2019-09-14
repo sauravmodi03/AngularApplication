@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form (ngSubmit)="sendEmail()">
+      <ion-item>
+        <ion-label>Subject :</ion-label>
+        <ion-input type="text" [(ngModel)]="emailSubject" name="subject"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Content :</ion-label>
+        <ion-textarea class="emailBody" [(ngModel)]="emailBody" name="description"></ion-textarea>
+      </ion-item>
+      <ion-button expand="full" type="submit" block>Send</ion-button>
+    </form>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-item detail-none routerDirection="'root'" routerLink="/home">
+    <div class="footer">
+      <ion-title class="home-icon">
+        <ion-icon name="home"></ion-icon>
+      </ion-title>
+    </div>
+  </ion-item>
+</ion-footer>

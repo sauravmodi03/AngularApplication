@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Skills</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let skill of skills; let i = index">
+    <ion-card-header (click)="showhide(i)">
+      <ion-row>
+        <ion-col size="1">
+          <ion-icon class="arrow" *ngIf="!skill.enable" name="arrow-dropright"></ion-icon>
+          <ion-icon class="arrow" *ngIf="skill.enable" name="arrow-dropdown"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-title>{{skill.label}}</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-card-header>
+    <ion-card-content *ngIf="skill.enable">
+      <ion-list *ngFor="let obj of skill.skills">
+        <ion-item>
+          <ion-icon name="checkmark"></ion-icon>
+          <ion-title>{{obj}}</ion-title>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <ion-item detail-none routerDirection="'root'" routerLink="/home">
+    <div class="footer">
+      <ion-title class="home-icon">
+        <ion-icon name="home"></ion-icon>
+      </ion-title>
+    </div>
+  </ion-item>
+</ion-footer>
